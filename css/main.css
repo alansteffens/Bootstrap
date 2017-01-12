@@ -1,0 +1,36 @@
+/*----------------------------------------
+  HTML selectors
+----------------------------------------*/
+
+
+/*----------------------------------------
+  Class selectors
+----------------------------------------*/
+.wrapper {
+  background: url(../images/pcbblue-cropped.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  max-width: 1200px;
+/*  margin: 0px auto;
+  padding: 0 !important;
+  height: auto; */
+}
+
+.relentless, .increasing, .experience, .allowing  {
+/* remove all display, width, padding and margins to see what Bootstrap does - only apply specific text formatting */
+/*	display: block; */
+/*	width: 100%; */
+	text-align: left;
+/*	padding: 84px 0 0 106px !important; */
+	vertical-align: top;
+	font-family: 'cervo_neueextrabold_neue'; /*'cervo_neuelight_neue'; 'cervo_neueextrabold_neue'; */
+	font-size: 1.74em;
+	color: white;
+	text-shadow: 0 0 5px black, 0 0 10px black;
+	line-height: 1.015;
+/* add some padding between rows */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
