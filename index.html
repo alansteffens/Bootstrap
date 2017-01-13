@@ -1,18 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
   <meta name="viewport" content="width=device-width, initial scale=1.0">
   <title>Bootstrap Playground</title>
-  <link rel="stylesheet" href="css/main.css" type="text/css" />
-  <!-- site font additions -->
+  <!-- bootstrap stylesheets -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" /> removed this on 1/13/17 and replaced instead with CDN reference to it -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- site font stylesheets -->
   <link rel="stylesheet" href="css/fonts/cervoneue_extrabold_macroman/stylesheet.css" type="text/css" charset="utf-8" />
   <link rel="stylesheet" href="css/fonts/cervoneue_light_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-  <!-- bootstrap additions -->
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <script src="js/bootstrap.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <!-- my website stylesheet -->
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
   <style type="text/css">
     .experience {
       display: inline-block;
@@ -25,24 +26,30 @@
   </style>
 </head>
 <!-- Issues to fix:
-      1. Bootstrap sticks in larger margins on the wrapper as the browser window gets smaller (so white space outside the website increases ... there should be no white space if browser window is smaller than 1200px).  Caused by "container" changing the max-width at each breakpoint.  Need to figure out how to fix this, believe this will solve most of my BS layout problems
-      2. Bootstrap padding is not working, p-t-4 did not do anything
-      3. Push and pull don't appear to work -->
+      1. Bootstrap sticks in larger margins on the wrapper as the browser window gets smaller (so white space outside the website increases ... there should be no white space if browser window is smaller than 1200px).  Caused by "container" changing the max-width at each breakpoint.  Need to figure out how to fix this, believe this will solve most of my BS layout problems -> in main.css I added an !important on my max-width to see if this overrides Bootstrap changes here.  This worked until I add the CDN Bootstrap JavaScript include instead of my internal ones!
+      2. Bootstrap padding is not working, p-l-4 on the does not do anything -> I added a p-l-4 to my "relentless" line -  changed html tag and order of classes (Bootstrap first, then mine) and moved Bootstrap JS files to bottom based on Amy's forum suggestions.  None of these suggestions fixed #2, however I can't seem to find the Bootstrap documentation on the padding and margin CSS now, maybe they removed that functionality since Guil's Bootstrap class.
+      3. Push and pull don't appear to work -> I added a col-lg-push-4 to my "allowing" line - Push and pull appear to work now -->
 <body>
-  <div class="wrapper container">
+  <div class="container wrapper">
     <div class="row">
-      <div class="relentless col-xs-12">RELENTLESS <span style="font-family: 'cervo_neuelight_neue';">PASSION FOR</span><br>CUSTOMER SATISFACTION</div>
+      <div class="col-xs-12 p-l-4 relentless"><span style="font-family: 'cervo_neueextrabold_neue';">RELENTLESS </span>PASSION FOR<br><span style="font-family: 'cervo_neueextrabold_neue';">CUSTOMER SATISFACTION</span></div>
     </div>
     <div class="row">
-      <div class="increasing col-md-7 col-xs-12">INCREASING OUR CUSTOMERS<br><span style="font-family: 'cervo_neueextrabold_neue';">COMPETITIVENESS</span></div>
+      <div class="col-md-7 col-xs-12 increasing">INCREASING OUR CUSTOMERS<br><span style="font-family: 'cervo_neueextrabold_neue';">COMPETITIVENESS</span></div>
       <div class="col-md-5 col-xs-12" style="display: block;">
-        <div class="experience text-xs-center"><span style="text-align: center">EXPERIENCE<br>THE ATS<br>DIFFERENCE</span></div>
+        <div class="text-xs-center experience"><span style="text-align: center; font-family: 'cervo_neueextrabold_neue';">EXPERIENCE<br>THE ATS<br>DIFFERENCE</span></div>
         <div class="circlearrow"><a href="corpvideo.html"><img alt="" src="images/circlearrow-white.png" onmouseover="this.src='images/circlearrow-red.png'" onmouseout="this.src='images/circlearrow-white.png'"/></a></div>
       </div>
     </div>
     <div class="row">
-      <div class="allowing col-md-12">ALLOWING OUR CUSTOMERS<br>TO <span style="font-family: 'cervo_neueextrabold_neue';">FOCUS</span> ON THEIR TRUE<br><span style="font-family: 'cervo_neueextrabold_neue';">CORE COMPETENCIES</span></div>
+      <div class="col-md-12 col-lg-push-4 allowing">ALLOWING OUR CUSTOMERS<br>TO <span style="font-family: 'cervo_neueextrabold_neue';">FOCUS</span> ON THEIR TRUE<br><span style="font-family: 'cervo_neueextrabold_neue';">CORE COMPETENCIES</span></div>
     </div>
   </div>
+<!-- bootstrap javascript -->
+<!-- removed this on 1/13/17 and replaced instead with CDN reference to it
+  <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap.min.js"></script> -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
