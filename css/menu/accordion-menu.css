@@ -1,0 +1,150 @@
+﻿/* Accordion Menu by www.menucool.com/vertical/accordion-menu -- heavily modified by Alan Steffens */
+
+#accordion {
+    visibility:hidden;
+    right: 0px;
+/*    box-shadow:0 0 12px rgba(0,0,0,0.3); -- Alan commented this out (removed shadow from menu box) */
+}
+
+/* root UL */
+#accordion ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+/* sub UL */
+#accordion ul ul {
+    padding:0px 0;
+}
+
+/*---------- Indents------*/
+
+/*top-level*/
+#menu li div a { /* Alan added this selector on 1/20/17 */
+  font-family: "cervo_neueextrabold_neue";
+  font-weight: bold;
+  font-size: 30px !important;
+  color: #014a8c; /* Make top-level item with no sub-level items blue */
+  margin: 15px 25px 0 12px;
+}
+
+#menu li div a:hover { /* Alan added this selector on 1/20/17 */
+  background-color: black;
+  color: white;
+	border: 1px solid black;
+}
+
+#menu li div a:visited { /* Alan added this selector on 2/2/17 */
+  background-color: black;
+  color: #014a8c; /* Top-level item with no sub-level items should remain blue */
+	border: 1px solid black;
+}
+
+
+#accordion .top > a, #accordion .top > div {
+  padding-left: 0px; /* Alan changed from 20px to 0px (removed some of the black space from the left) */
+  padding-top: 0px;
+  padding-bottom: 0px; /* Alan changed padding-top:10px;padding-bottom:10px; to 0 and 0 (fixed spacing between main menu items) */
+}
+
+/*2nd-level*/
+#accordion li li > a, #accordion li li > div {
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px; /* Alan changed (adds padding inside menu item box) */
+  margin-right: 25px;
+}
+
+/*3rd-level*/
+#accordion li li li > a, #accordion li li li > div {padding-left:50px;}
+
+
+/*---------- Other styles ------*/
+
+/* headings */
+#accordion li > div {
+    font-family: "cervo_neueextrabold_neue"; /* Alan changed from 'Lucida Grande', Geneva, sans-serif; to "Cervo Neue" (changed menu main text font) */
+    font-weight: bold;
+    font-size: 30px; /* Alan changed xx-large with 30px */
+    color: white; /* Alan changed #333 with white (changed main menu text to white) */
+/*    padding-bottom: 10px; /* Alan added this to get spacing between main menu items -- DIDN'T WORK */
+}
+#accordion .active > div {
+/*    color:black; -- Alan changed from black to white (changed bars in menu button to white) */
+    color: white;
+}
+
+#accordion li {
+    font-family: "cervo_neuelight_neue"; /* Alan changed Arial, sans-serif; to Cervo Neue (changed menu text sub-main text font) */
+    font-size: 30px; /* Alan changed from 13px to 30pt */
+	  padding: 0 0 0 30px; /* Carin changed to remove padding from top, right, bottom (removed spacing between menu items) */
+    margin:0;
+    overflow:hidden;
+	  cursor: pointer;
+/*	text-align:right; /* Alan added this (aligned all main and sub-menu text to the right with no padding) - didn't like so removed it */
+}
+
+/* Add borders to the top LIs */
+#accordion .top {
+	/*border:1px solid #000; -- Removed by menu-cool techs */
+}
+
+/* links - sub-menu text stuff only */
+#accordion a {
+  color:white; /* Alan changed from #333 to white (changed non-selected sub-menu text to white) */
+  font-weight:normal;
+  font-size: 24px; /* Alan changed from 13px to x-large (changed font-size of all sub-menu text -- NOT WORKING) */
+  text-decoration:none;
+  display:block;
+  line-height:1;
+  transition:background-color 0.3s;
+	border: 1px solid black; /* Alan added this (adds a black border around menu items at rest, keeps hovering from jumping when border added) */
+}
+
+#accordion a:hover {
+  background-color: black; /* Alan changed from #eee to black */
+  color: white; /* Alan added (MADE NO DIFFERENCE, not sure why) */
+	border: 1px solid white; /* Alan added this (adds a white border around the menu item when hovering) */
+}
+
+#accordion a.active {
+    background-color:black; /* Alan changed from #333 to black */
+/*    color:white; -- Alan replaced (changed selected-active sub-menu text to red-#D0281F) */
+    color: #D0281F;
+}
+
+/* carets -- this is the arrow to the left of the main menu items - I WILL REMOVE THIS EVENTUALLY */
+#accordion .caret {
+    color:inherit;
+    display:inline-block; /*float:right;*/
+    margin-top:0px;
+    margin-right:12px;
+    width: 0;
+    height: 0;
+    overflow:hidden;/*for IE6*/
+    border-style:solid;
+    border-width:0px; /* Alan changed from 6px to 0px (hides caret) */
+    position:relative;
+    border-bottom:6px solid transparent;
+    border-right: none;
+    border-left-color:initial;
+    border-top-color:transparent;
+}
+
+#accordion .caret.active {
+    margin-bottom:2px;
+    margin-right:6px;
+    border-bottom:none;
+    border-right: 6px solid transparent;
+    border-left-color: transparent;
+    border-top-color:initial;
+}
+
+#accordion li {
+    -ms-user-select:none;
+    -mos-user-select:none;
+    -webkit-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}

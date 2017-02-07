@@ -1,7 +1,7 @@
 ﻿/*----------------------------------------
   HTML selectors
 ----------------------------------------*/
-html { font-size: 100%; }
+html { font-size: 16px; }
 body { margin: 0; background-color: black; color: #fff; }
 
 /*----------------------------------------
@@ -86,7 +86,7 @@ body { margin: 0; background-color: black; color: #fff; }
 	font-family: Arial;
 	font-size: 0.9em;
 	font-weight: bold;
-	color: #D0281f;
+	color: #d0281f;
 	float: right;
 	padding: 8px 20px 0 0;
 	position: absolute;
@@ -127,7 +127,7 @@ body { margin: 0; background-color: black; color: #fff; }
 
 .home .container { margin: 0; max-width: 100%; } /* fix F'ing Bootstrap crap */
 
-@media (max-width: 767px) { /* at phone landscape sizes adjust padding and reduce font size */
+@media (max-width: 767px) {
 	.relentless { padding: 5% 0 0 5%; font-size: 1.4em; }
   .increasing { padding: 5% 0 0 9%; font-size: 1.4em; }
 	.experience { padding: 8% 0 0 5%; font-size: 1.4em; margin-left: 3%; }
@@ -144,12 +144,13 @@ body { margin: 0; background-color: black; color: #fff; }
 	.allowing { padding: 6% 0 0 6.5%; }
 	.experience2 { margin-top: -8%; padding: 0 5% 0 5%; text-align: right; }
 }
+
 /* Home page Awards section CSS */
 .awards {
 	display: block;
 	padding: 10px 0 0 15px;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 0.65em;
+	font-size: 0.68em;
 	color: white;
 	text-align: center;
 }
@@ -165,8 +166,7 @@ body { margin: 0; background-color: black; color: #fff; }
 	padding: 20px 0 0 0;
   text-shadow: 0px 0px 1px black, 0px 0px 2px black;
 }
-@media (min-width: 436px) and (max-width: 736px) { /* undo all the bootstrap margins and gutters, move text closer to image bottom, and update  text size between 436 and 736 o */
-	.awards { font-size: 0.68em; line-height: 1.25; }
+@media (min-width: 420px) and (max-width: 661px) { /* undo all the bootstrap margins and gutters, move text closer to image bottom between 420 and 661 */
   .awardsleft { margin-left: -95px; margin-right: -20px; }
   .awardscenter { margin-left: -20px; margin-right: -20px; }
   .awardsright { margin-left: -20px; margin-right: -60px; }
@@ -175,8 +175,8 @@ body { margin: 0; background-color: black; color: #fff; }
   .iwtext { margin-top: -3px; }
   .bwtext { margin-top: -15px; margin-left: -10px; }
 }
-@media (max-width: 435px) { /* have awards stack at 435, remove blank space in graphics to tighten them up vertically */
-	.awards { margin: 10px -15px 0 -15px; padding-top: 0 !important; font-size: 0.68em; line-height: 1.25; }
+@media (max-width: 419px) { /* have awards stack at 419, remove blank space in graphics to tighten them up vertically */
+	.awards { margin: 10px -15px 0 -15px; padding-top: 0 !important; font-size: 0.68em; line-height: 1.25; } /* background: rgba(0,0,0,.4); */
 	.awardsleft { margin-bottom: -25px; width: 100%; text-align: center; }
   .awardscenter { margin-bottom: -15px; margin-left: -20px; margin-top: -10px; width: 100%; text-align: center; }
   .awardsright { margin-left: -20px; margin-top: -10px; width: 100%; text-align: center; }
@@ -191,7 +191,7 @@ body { margin: 0; background-color: black; color: #fff; }
 	display: block;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
-	font-size: 0.62em;
+	font-size: 0.68em;
 	color: white;
 	width: 100%;
 	text-align: center;
@@ -258,6 +258,7 @@ body { margin: 0; background-color: black; color: #fff; }
 /* @media only screen and (max-device-width: 736px) { /* on phones make the awards and footer text bigger */
 @media (max-width: 736px) {
 	.footerarea { font-size: 0.68em; }
+	.awards { font-size: 0.68em; line-height: 1.25; }
 	.certifications { display: none; }
 	.certifications2 { display: inline-block; }
 }
@@ -282,7 +283,7 @@ body { margin: 0; background-color: black; color: #fff; }
   .copyright2 { padding-top: 20px !important; font-size: 1.05em; }
 	.socialmedia { padding: 25px 0 10px 0; 	text-align: center; }
 }
-@media (max-width: 435px) {
+@media (max-width: 419px) {
 	.certifications2 { padding-top: 5px !important; }
 	.company { display: none; }
 	.fmenu { text-align: center; padding-top: 10px; font-size: 1.05em; }

@@ -1,7 +1,7 @@
 ﻿/*----------------------------------------
   HTML selectors
 ----------------------------------------*/
-html { font-size: 100%; }
+html { font-size: 16px; }
 body { margin: 0; background-color: black; color: #fff; }
 
 /*----------------------------------------
@@ -10,20 +10,14 @@ body { margin: 0; background-color: black; color: #fff; }
 .wrapper {
 	width: 100%;
 	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  max-width: 1200px;
-  height: auto;
-	margin: 0 auto;
-}
-.content {
-	margin: 0 auto;
-	box-sizing: border-box;
-	position: relative;
-}
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-width: 1200px;
+    height: auto;
+	}
 
-/* Page backgrounds */
+/* backgrounds */
 .home .wrapper {
   background: url(../images/pcbblue-cropped-dark.jpg) no-repeat top center fixed;
 }
@@ -32,7 +26,7 @@ body { margin: 0; background-color: black; color: #fff; }
 	background-size: cover;
 }
 
-/* Menu */
+/* menu */
 #panel1 {
 	z-index:100040;
 	}
@@ -50,9 +44,15 @@ body { margin: 0; background-color: black; color: #fff; }
 	margin-top:-30px;
 }
 
+.content {
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: relative;
+}
+
 /* Website Header CSS and media queries */
 .logo {
-	padding: 9px 0 0 15px;
+	padding: 9px 0 0 0;
 	margin: 0;
 	text-align: left;
   display: inline-block;
@@ -88,29 +88,41 @@ body { margin: 0; background-color: black; color: #fff; }
 	font-weight: bold;
 	color: #D0281f;
 	float: right;
-	padding: 8px 20px 0 0;
+	padding: 8px 10px 0 0;
 	position: absolute;
 	top: 0;
 	right: 0;
 	text-align: right;
 }
 @media (max-width: 933px) { /* have EMS stack and decrease in size */
-	.ems { margin-top: 45px; padding-right: 15px; padding-left: 10px; }
+	.ems { margin-top: 45px; padding-right: 8px; padding-left: 5px; }
 	.ems img { max-width: 100%; height: auto;	}
 	.tagline { margin-top: -15px !important; }
 }
 @media (max-width: 575px) { /* header adjustments when in portrait phone mode */
-	.ems { margin-right: 0; margin-left: 0; padding: 10px 10px 0 10px; }
+	.ems {
+		margin-right: 0;
+		margin-left: 0;
+		padding: 10px 0 0 0 !important;
+  }
 	.tagline { margin-top: -19px !important; }
-	.menubutton { padding-right: 10px; }
+	.menubutton { padding-right: 0; }
 }
 @media (max-width: 488px) { /* tighten up tagline to bottom of EMS */
 	.ems { padding-top: 7px; }
 	.tagline { margin-top: -19px !important; }
 }
+.text-glow {
+	text-shadow: 1px 0px 20px black;
+	-webkit-transition: 1s linear 0s;
+	-moz-transition: 1s linear 0s;
+	-o-transition: 1s linear 0s;
+	transition: 1s linear 0s;
+	outline: 0 none;
+}
 
 /* Home page Marketing text CSS and media queries */
-.relentless, .increasing, .experience, .allowing {
+.relentless, .increasing, .experience, .allowing  {
 	text-align: left;
 	vertical-align: top;
 	font-family: 'cervo_neuelight_neue';
@@ -123,11 +135,9 @@ body { margin: 0; background-color: black; color: #fff; }
 .increasing { padding: 5.5% 0 0 15%; }
 .experience { display: inline-block; padding: 10.5% 0 0 0; }
 .circlearrow { display: inline-block; padding: 10.5% 0 0 10px; }
-.allowing { display: block; padding: 4.3% 0 6% 11%; }
+.allowing { display: block; padding: 4.3% 0 6% 11%;	}
 
-.home .container { margin: 0; max-width: 100%; } /* fix F'ing Bootstrap crap */
-
-@media (max-width: 767px) { /* at phone landscape sizes adjust padding and reduce font size */
+@media (max-width: 767px) {
 	.relentless { padding: 5% 0 0 5%; font-size: 1.4em; }
   .increasing { padding: 5% 0 0 9%; font-size: 1.4em; }
 	.experience { padding: 8% 0 0 5%; font-size: 1.4em; margin-left: 3%; }
@@ -147,11 +157,10 @@ body { margin: 0; background-color: black; color: #fff; }
 /* Home page Awards section CSS */
 .awards {
 	display: block;
-	padding: 10px 0 0 15px;
+	padding-top: 30px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 0.65em;
 	color: white;
-	text-align: center;
 }
 .awardscenter { display: inline-block; text-align: center; padding: 0; }
 .awardsleft { display: inline-block; text-align: right; padding-top: 4px; }
@@ -165,8 +174,7 @@ body { margin: 0; background-color: black; color: #fff; }
 	padding: 20px 0 0 0;
   text-shadow: 0px 0px 1px black, 0px 0px 2px black;
 }
-@media (min-width: 436px) and (max-width: 736px) { /* undo all the bootstrap margins and gutters, move text closer to image bottom, and update  text size between 436 and 736 o */
-	.awards { font-size: 0.68em; line-height: 1.25; }
+@media (min-width: 420px) and (max-width: 661px) { /* undo all the bootstrap margins and gutters, move text closer to image bottom between 420 and 661 */
   .awardsleft { margin-left: -95px; margin-right: -20px; }
   .awardscenter { margin-left: -20px; margin-right: -20px; }
   .awardsright { margin-left: -20px; margin-right: -60px; }
@@ -175,8 +183,16 @@ body { margin: 0; background-color: black; color: #fff; }
   .iwtext { margin-top: -3px; }
   .bwtext { margin-top: -15px; margin-left: -10px; }
 }
-@media (max-width: 435px) { /* have awards stack at 435, remove blank space in graphics to tighten them up vertically */
-	.awards { margin: 10px -15px 0 -15px; padding-top: 0 !important; font-size: 0.68em; line-height: 1.25; }
+@media (min-width: 420px) and (max-width: 475px) {
+	.certifications2 { padding-top: 10px !important; }
+	.company { display: none; }
+	.fmenu { text-align: center;
+		padding-top: 10px;
+		font-size: 1.12em;
+	}
+}
+@media (max-width: 419px) { /* have awards stack at 419, remove blank space in graphics to tighten them up vertically */
+	.awards { margin: 20px -15px 0 -15px; padding-top: 0 !important; font-size: 0.68em; line-height: 1.25; background: rgba(0,0,0,.4); }
 	.awardsleft { margin-bottom: -25px; width: 100%; text-align: center; }
   .awardscenter { margin-bottom: -15px; margin-left: -20px; margin-top: -10px; width: 100%; text-align: center; }
   .awardsright { margin-left: -20px; margin-top: -10px; width: 100%; text-align: center; }
@@ -184,6 +200,12 @@ body { margin: 0; background-color: black; color: #fff; }
 	.seatext { margin-top: 3px; }
   .iwtext { margin-top: 4px; }
   .bwtext { margin-top: 3px; }
+	.certifications2 { padding-top: 3px !important;  background: rgba(0,0,0,1); /* rgba(1,45,85,1); */ }
+	.company { display: none; }
+	.fmenu { text-align: center;
+		padding-top: 10px;
+		font-size: 1.05em;
+	}
 }
 
 /* Home page Footer section CSS */
@@ -191,22 +213,16 @@ body { margin: 0; background-color: black; color: #fff; }
 	display: block;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
-	font-size: 0.62em;
+	font-size: 0.675em;
 	color: white;
 	width: 100%;
-	text-align: center;
 }
-.home .footerarea { /* shift footer social media icons into awards area */
+.home .footerarea {
 	margin-top: -40px;
-}
-.socialmedia {
-	padding: 0 0 5px 0;
-	text-align: left;
 }
 .footermenu {
 	display: inline-block;
-  padding: 5px 0 0 15px;
-	margin-top: -25px;
+  padding: 5px 0 0 0;
   float: left;
   text-align: left !important;
 }
@@ -220,13 +236,13 @@ body { margin: 0; background-color: black; color: #fff; }
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-size: 1em;
-  color: #999;
-  padding: 37px 0 0 10px;
+  color: #BBB;
+  padding: 27px 0 0 10px;
 	line-height: 1.0;
 }
 .certifications {
 	display: inline-block;
-  padding: 5px 15px 0 0;
+  padding: 0;
   text-align: right;
   float: right;
 }
@@ -236,56 +252,31 @@ body { margin: 0; background-color: black; color: #fff; }
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-size: 1em;
-  color: #999;
-  padding: 27px 0 0 10px; /*  27px 0 0 10px */
-	margin-top: 8px;
+  color: #BBB;
+  padding: 27px 0 0 10px;
 	line-height: 1.0;
 }
 .certifications2 {
   display: none;
-  padding: 8px 0 5px 0 !important;
+  padding: 0;
   text-align: right;
   float: right;
 }
 @media (max-width: 958px) {
 	.home .footerarea { margin-top: -20px; }
 }
-@media (max-width: 814px) { /* when copyright gets squished move it underneath menu and certs, as social media icons get close to left awards graphic shift entire footer down 10px */
-	.home .footerarea { margin-top: -10px; }
-	.copyright { display: none !important; }
-  .copyright2 { display: inline-block; width: 100%; text-align: center; padding-top: 0 !important; margin-top: -5px !important; }
-}
-/* @media only screen and (max-device-width: 736px) { /* on phones make the awards and footer text bigger */
-@media (max-width: 736px) {
-	.footerarea { font-size: 0.68em; }
-	.certifications { display: none; }
-	.certifications2 { display: inline-block; }
+@media (max-width: 814px) {
+  .copyright { display: none !important; }
+  .copyright2 { display: inline-block; width: 100%; text-align: center; padding-top: 0 !important; }
 }
 @media (max-width: 620px) {
 	.home .footerarea { margin-top: 0; }
 }
-@media (max-width: 516px) { /* just before awards stack, stack footer elements, stop displaying company name, center, upsize font and black background the footer menu */
-	.awards { padding-bottom: 10px; }
-	.footerarea { background: rgba(0,0,0,1); }
-	.footermenu { width: 100%; padding: 13px 0 0 0 !important; }
-	.company { display: none; }
-	.fmenu { text-align: center; padding-top: 5px; font-size: 1.12em; }
+@media (max-width: 474px) {
+  .footermenu { width: 100%; padding: 0 !important;}
   .certifications { display: none; }
-  .certifications2 {
-		display: inline-block;
-		width: 100%;
-		text-align: center;
-		font-size: 1.05em;
-		background: rgba(0,22,44,1);
-		padding-top: 10px !important;
-	}
-  .copyright2 { padding-top: 20px !important; font-size: 1.05em; }
-	.socialmedia { padding: 25px 0 10px 0; 	text-align: center; }
-}
-@media (max-width: 435px) {
-	.certifications2 { padding-top: 5px !important; }
-	.company { display: none; }
-	.fmenu { text-align: center; padding-top: 10px; font-size: 1.05em; }
+  .certifications2 { display:inline-block; width: 100%; text-align: center; }
+  .copyright2 { padding-top: 10px !important; }
 }
 
 /* two column pages */
@@ -324,14 +315,4 @@ h1 {
 .floatlist li {
   font-size: 1em !important;
   padding: 1px;
-}
-
-/* Effects */
-.text-glow {
-	text-shadow: 1px 0px 20px black;
-	-webkit-transition: 1s linear 0s;
-	-moz-transition: 1s linear 0s;
-	-o-transition: 1s linear 0s;
-	transition: 1s linear 0s;
-	outline: 0 none;
 }

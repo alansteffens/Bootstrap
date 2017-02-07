@@ -1,0 +1,64 @@
+/*----------------------------------------
+  HTML selectors
+----------------------------------------*/
+html { font-size: 16px; }
+body { margin: 0; background-color: black; color: #fff; }
+
+/*----------------------------------------
+  Class selectors
+----------------------------------------*/
+.wrapper {
+	width: 100%;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  max-width: 1200px;
+  height: auto;
+	margin: 0 auto;
+}
+.content {
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: relative;
+}
+
+/* Page backgrounds */
+.home .wrapper {
+  background: url(../images/pcbblue-cropped-dark.jpg) no-repeat top center fixed;
+}
+
+/* Home page Marketing text CSS and media queries */
+.relentless, .increasing, .experience, .allowing {
+	text-align: left;
+	vertical-align: top;
+	font-family: 'cervo_neuelight_neue';
+	font-size: 1.64em;
+	color: white;
+	text-shadow: 0 0 5px black, 0 0 10px black;
+	line-height: 1.015;
+}
+.relentless { display: block; padding: 6% 0 0 6%; }
+.increasingsection { display: block; }
+.increasing { display: inline-block; padding: 5.5% 0 0 15%; }
+.experience { display: inline-block; padding: 4% 0 0 15%; text-align: center; } /* 10.5% 0 0 0 */
+.circlearrow { display: inline-block; padding: 3.5% 0 0 10px; }
+.allowing { display: block; padding: 4.3% 0 6% 11%; }
+
+@media (max-width: 767px) {
+	.relentless { padding: 5% 0 0 5%; font-size: 1.4em; }
+  .increasing { width: 100%; padding: 5% 0 0 9%; font-size: 1.4em; }
+  .experience { padding: 8% 0 0 5%; font-size: 1.4em; margin-left: 3%; }
+  .circlearrow { padding: 6% 0 0 5px; }
+	.allowing { padding: 0.5% 0 3% 6.5%; font-size: 1.4em;	}
+}
+@media (max-width: 559px) { /* increasing line wraps when > 50% or 6 cols */
+	.increasing { padding: 8% 0 6% 15%; }
+	.experience { padding: 17% 0 0 5%; }
+	.circlearrow { padding: 15% 0 0 5px; }
+}
+@media (max-width: 544px) { /* */
+	.increasing { padding: 5% 0 0 15%; }
+	.allowing { padding: 6% 0 0 6.5%; }
+	.experience2 { margin-top: -8%; padding: 0 5% 0 5%; text-align: right; }
+}
